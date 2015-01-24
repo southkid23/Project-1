@@ -1,0 +1,69 @@
+
+<html>
+<head>
+	
+    
+</head>
+
+<body>
+
+	<div id = "sign_in">
+		<form action="" id = "" method = "post">
+			<table border = "0" cellpadding>
+		</form>
+	<div id = "registration" style="margin-top:150">
+		<form action="" id="" method="post" onsubmit="return ValidateForm(this);">
+			<h1 style="text-align:center">Registration</h1>
+
+			<script type="text/javascript">
+			function ValidateForm(frm) {
+			
+			if (frm.UserName.value == "") {alert('UserName is required');frm.UserName.focus();return false}
+			if (frm.password.value == "") {alert('Password is required'); frm.password.focus(); return false}
+			if (frm.Con_password.value == "") {alert('Conform Password is required'); frm.Con_password.focus(); return false}
+			if (frm.Con_password.value != frm.password.value) {alert('Your password is not match'); frm.Con_password.focus(); return false}
+			
+			if (frm.FromEmailAddress.value == "") {alert('Email address is required.');frm.FromEmailAddress.focus();return false;}
+			if (frm.FromEmailAddress.value.indexOf("@") < 1 || frm.FromEmailAddress.value.indexOf(".") < 1) {alert('Please enter a valid email address.');frm.FromEmailAddress.focus();return false;}
+			
+			return true; }
+
+			</script>
+			<table border="0" cellpadding="5" cellspacing="0" width="45%">
+				<tr>
+					<td><b>User Name *:</b></td>
+					<td>
+						<input id = "UserName" name = "UserName" type = "text" maxlength = "30" />
+					</td>
+				</tr><tr>
+					<td><b>Password *:</b></td>
+					<td>
+						<input id = "password" name = "password" type = "password" maxlength = "60" /></td>
+				</tr><tr>
+					<td><b>Please confirm Password *:</b></td>
+					<td>
+						<input id = "Con_password" name = "Con_password" type = "password" maxlength = "60" /></td>
+				</tr><tr>
+					<td><b>Email address *:</b></td>
+					<td><input id="FromEmailAddress" name="FromEmailAddress" type="text" maxlength="60" /></td>
+				</tr><tr>
+					<td colspan="2" align="center">
+					<br />
+					* - required fields. 
+					<br />
+					<br/>
+					</td>
+				</tr><tr>
+					<td>
+					</td>
+					<td>
+					<input id="skip_Submit" name="skip_Submit" type="submit" value="Submit" />
+					</td>
+				</tr>
+
+					
+			</table>
+		</form>
+	</div>
+</body>
+</html>
